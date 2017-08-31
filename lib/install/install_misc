@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+echo ""
+echo "--------------------------------------------------------------"
+echo " INSTALLING MISC TOOLS"
+echo "--------------------------------------------------------------"
+echo ""
+echo "FORTUNE"
+echo "-------"
+sudo apt-get install fortune
