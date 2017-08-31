@@ -15,3 +15,19 @@ sudo apt-get install cowsay
 
 echo "Testing Fortune & Cowsay"
 fortune | cowsay
+
+
+echo ""
+echo "TOILET"
+echo "-------"
+sudo apt-get install toilet
+toilet -f mono12 -F metal DaLe
+# show the time
+lib/show_time
+# show the time in a loop
+#while true; do echo "$(date '+%D %T' | toilet -f term -F border --gay)"; sleep 1; done
+
+echo ""
+echo "CMATRIX"
+echo "-------"
+sudo apt-get install cmatrix
