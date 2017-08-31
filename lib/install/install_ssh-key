@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+echo ""
+echo "--------------------------------------------------------------"
+echo " INSTALLING SSH KEY"
+echo "--------------------------------------------------------------"
+
+# Before you begin
+# Make sure you are running a bash shell. Bash shell is available in:
+# Linux (Ubuntu, Debian, Gentoo, etc...)
+# Mac OS X
+# Linux Subsystem for Windows (Guide: https://msdn.microsoft.com/en-us/commandline/wsl/install_guide)*
+# *Can only be used inside Linux Subsystem for Windows.
+# Uses Ubuntu 14.04 prior to Creator's Update, 16.04 after the Creator's update (recommended)
+# Use
+# No longer request passwords for the following commands
+# ssh
+# scp
+# sftp
+# rsync
+# ...
+# Generate a key on your system
+# Start by using ssh-keygen to create a key:
+# ssh-keygen -t rsa
+# Follow the steps in output of the command to complete the generation
+# Copy your public key to the target device or server with, you must enter the target user password once.
+# ssh-copy-id <username>@<ip-or-fqdn>
+# From now on any command requiring SSH credentials will no longer request a password. eg.
+# ssh pi@192.168.60.1
+# References
+# Digital Ocean guide: https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2
+
+
+sshfolder=`~`"/.ssh"
+file="${sshfolder}/id_rsa.pub"
+
+if [ ! -f "$file" ]
+then
+  echo "No SSH key was found"
+  echo "Generating SSH key ... (press ENTER a couple of times)"
+  ssh-keygen -t rsa
+
+  echo ""
+  echo "Your key is now :"
+  cat $file
+
+  echo ""
+  echo "To transfer this SSH key to another system , use the following command : "
+  echo "ssh-copy-id <username>@<ip-or-fqdn>"
+else
+  echo "SSH key found"
+fi
