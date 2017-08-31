@@ -36,8 +36,8 @@ then
 	echo "Adding the posh script to '.bashrc' file"
   if [ -f "$file" ]
   then
-    cat "${thisfolder}/misc/bashrc_posh-git" >> ~/.bashrc
-    echo "Reload the '.bashrc' file"
+    cat misc/bashrc_posh-git >> ~/.bashrc
+    echo "Reloading the '.bashrc' file"
     . ~/.bashrc
   fi
 
