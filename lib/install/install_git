@@ -18,7 +18,8 @@ echo '--------'
 
 downloadfolder="$HOME/linuxdo-dl/downloads"
 file="${downloadfolder}/git-prompt.sh"
-url="https://github.com/lyze/posh-git-sh/blob/master/git-prompt.sh"
+url="https://github.com/lyze/posh-git-sh.git"
+
 
 if [ ! -f "$file" ]
 then
@@ -30,20 +31,20 @@ then
   echo $downloadfolder
 
 	echo "Retrieving file from '${url}'"
-	wget $url -P $downloadfolder
+	git clone $url $downloadfolder
 
-  echo "Making the script executable"
-  chmod u+x $file
-  ls -alh $downloadfolder
+  # echo "Making the script executable"
+  # chmod u+x $file
+  # ls -alh $downloadfolder
 
-	echo ""
-	echo "Adding the posh script to '.bashrc' file"
-  if [ -f "$file" ]
-  then
-    cat misc/bashrc_posh-git >> ~/.bashrc
-    echo "Reloading the '.bashrc' file"
-    . ~/.bashrc
-  fi
+	# echo ""
+	# echo "Adding the posh script to '.bashrc' file"
+  # if [ -f "$file" ]
+  # then
+  #   cat misc/bashrc_posh-git >> ~/.bashrc
+  #   echo "Reloading the '.bashrc' file"
+  #   . ~/.bashrc
+  # fi
 
 else
   echo "Posh-git has been found."
