@@ -31,7 +31,6 @@ echo "--------------------------------------------------------------"
 
 
 sshfolder="$HOME/.ssh"
-echo $sshfolder
 file="${sshfolder}/id_rsa.pub"
 
 if [ ! -f "$file" ]
