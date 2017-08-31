@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+
+#msg=`basename "$0"`
+#lib/show_logo $msg
+
+sudo apt-get install git
