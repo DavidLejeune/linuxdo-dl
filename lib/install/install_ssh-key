@@ -30,7 +30,8 @@ echo "--------------------------------------------------------------"
 # Digital Ocean guide: https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2
 
 
-sshfolder=`~`"/.ssh"
+sshfolder="$HOME/.ssh"
+echo $sshfolder
 file="${sshfolder}/id_rsa.pub"
 
 if [ ! -f "$file" ]
