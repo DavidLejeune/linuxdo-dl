@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+
+
+echo ""
+echo "--------------------------------------------------------------"
+echo " INSTALLING GIT"
+echo "--------------------------------------------------------------"
+#msg=`basename "$0"`
+#lib/show_logo $msg
+
+sudo apt-get install git
+
+
+echo ''
+echo 'POSH-GIT'
+echo '--------'
+
+thisfolder=`pwd`
+downloadfolder=`~`"/linuxdo-dl/downloads"
+file="${downloadfolder}/git-prompt.sh"
+url="https://github.com/lyze/posh-git-sh/blob/master/git-prompt.sh"
+
+if [ ! -f "$file" ]
+then
+    #echo "$0: File '${file}' not found."
+    	echo "File '${file}' not found."
+
+	echo "Creating the target directory (in your home directory)"
+	#mkdir -p $downloadfolder
+  echo $downloadfolder
+
+    	echo "Retrieving file from '${url}'"
+    	wget $url -P $downloadfolder
+
+	echo ""
+	echo "Adding the posh script to "
+
+
+else
+    echo "Posh-git has been found."
+fi

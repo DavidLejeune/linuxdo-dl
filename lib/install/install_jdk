@@ -5,6 +5,12 @@ echo " INSTALLING JDK"
 echo "--------------------------------------------------------------"
 
 sudo apt-get install openjdk-8-jre-headless
+
+
+
+echo ''
+echo 'JAVA_HOME variable'
+echo '------------------'
 if [ ${#JAVA_HOME} -le 1 ]; then
 	echo "JAVA_HOME not found" ;
 
