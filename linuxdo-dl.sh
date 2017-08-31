@@ -19,6 +19,11 @@ sudo apt-get upgrade
 msg='Run Installers'
 lib/show_logo $msg
 
+
+echo 'Ensuring the scripts are executable'
+chmod u+x lin/install/*
+echo ''
+
 echo 'Checking which install scripts will be run ...'
 run-parts --test lib/install
 echo ''
