@@ -23,19 +23,24 @@ url="https://github.com/lyze/posh-git-sh/blob/master/git-prompt.sh"
 if [ ! -f "$file" ]
 then
     #echo "$0: File '${file}' not found."
-    	echo "File '${file}' not found."
+  echo "File '${file}' not found."
 
-	echo "Creating the target directory (in your home directory)"
-	#mkdir -p $downloadfolder
+  echo "Creating the target directory (in your home directory)"
+  #mkdir -p $downloadfolder
   echo $downloadfolder
 
-    	echo "Retrieving file from '${url}'"
-    	wget $url -P $downloadfolder
+	echo "Retrieving file from '${url}'"
+	wget $url -P $downloadfolder
 
 	echo ""
-	echo "Adding the posh script to "
-
+	echo "Adding the posh script to '.bashrc' file"
+  if [ -f "$file" ]
+  then
+    cat "${thisfolder}/misc/bashrc_posh-git" >> ~/.bashrc
+    echo "Reload the '.bashrc' file"
+    . ~/.bashrc
+  fi
 
 else
-    echo "Posh-git has been found."
+  echo "Posh-git has been found."
 fi
