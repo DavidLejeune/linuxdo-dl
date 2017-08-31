@@ -14,7 +14,7 @@ echo '------------------'
 if [ ${#JAVA_HOME} -le 1 ]; then
 	echo "JAVA_HOME not found" ;
 
-	read -r -p "Would you like to add it to the /etc/profile file? [y/N] " response
+	read -r -p "Would you like to add the x64 path as JAVA_HOME to the /etc/profile file? [y/N] " response
 	if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]
 	then
 	    echo "export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre" | sudo tee --append /etc/profile
