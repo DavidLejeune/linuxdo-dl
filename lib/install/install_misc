@@ -8,3 +8,10 @@ echo ""
 echo "FORTUNE"
 echo "-------"
 sudo apt-get install fortune
+echo ""
+echo "COWSAY"
+echo "-------"
+sudo apt-get install cowsay
+
+echo "Testing Fortune & Cowsay"
+fortune | cowsay
