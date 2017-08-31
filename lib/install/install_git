@@ -17,6 +17,7 @@ echo '--------'
 
 
 downloadfolder="$HOME/linuxdo-dl/downloads"
+poshfolder="${downloadfolder}/posh-git-sh"
 file="${downloadfolder}/git-prompt.sh"
 url="https://github.com/lyze/posh-git-sh.git"
 
@@ -26,12 +27,12 @@ then
     #echo "$0: File '${file}' not found."
   echo "File '${file}' not found."
 
-  echo "Creating the target directory (in your home directory)"
-  #mkdir -p $downloadfolder
-  echo $downloadfolder
+  echo "Creating the target directories (in your home directory)"
+  mkdir -p $downloadfolder
+  mkdir -p $poshfolder
 
-	echo "Retrieving file from '${url}'"
-	git clone $url $downloadfolder
+	echo "Cloning the repo from url : '${url}'"
+	git clone $url $poshfolder
 
   # echo "Making the script executable"
   # chmod u+x $file
