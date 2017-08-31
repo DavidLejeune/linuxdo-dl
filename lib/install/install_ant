@@ -22,3 +22,5 @@ if [ ${#ANT_HOME} -le 1 ]; then
 else
 	echo "ANT_HOME exists already"
 fi
+
+sleep 1

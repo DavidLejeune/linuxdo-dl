@@ -30,3 +30,5 @@ if [ ${#JAVA_HOME} -le 1 ]; then
 else
 	echo "JAVA_HOME exists already"
 fi
+
+sleep 1
