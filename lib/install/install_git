@@ -25,9 +25,9 @@ then
     #echo "$0: File '${file}' not found."
   echo "File '${file}' not found."
 
-  echo "Creating the target directory (in your home directory)"
+  #echo "Creating the target directory (in your home directory)"
   #mkdir -p $downloadfolder
-  echo $downloadfolder
+  #echo $downloadfolder
 
 	echo "Retrieving file from '${url}'"
 	wget $url -P $downloadfolder
