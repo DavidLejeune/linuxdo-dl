@@ -10,7 +10,7 @@ lib/show_logo $msg
 msg='Run Installers'
 lib/show_logo $msg
 
-echo 'First things first , making sure evertyhing is up-to-date'
+echo 'First things first , making sure evertyhing is up-to-date ...'
 sudo apt-get update
 sudo apt-get upgrade
 

@@ -15,8 +15,8 @@ echo ''
 echo 'POSH-GIT'
 echo '--------'
 
-thisfolder=`pwd`
-downloadfolder=`~`"/linuxdo-dl/downloads"
+
+downloadfolder="$HOME/linuxdo-dl/downloads"
 file="${downloadfolder}/git-prompt.sh"
 url="https://github.com/lyze/posh-git-sh/blob/master/git-prompt.sh"
 
