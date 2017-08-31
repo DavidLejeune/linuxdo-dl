@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+echo ""
+echo "--------------------------------------------------------------"
+echo " INSTALLING JDK"
+echo "--------------------------------------------------------------"
+
+sudo apt-get install openjdk-8-jre-headless
+if [ ${#JAVA_HOME} -le 1 ]; then
+	echo "JAVA_HOME not found" ;
+
+	read -r -p "Would you like to add it to the /etc/profile file? [y/N] " response
+	if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]
+	then
+	    echo "export JAVA_HOME=/usr/bin/java" | sudo tee --append /etc/profile
+	    echo "export PATH=$JAVA_HOME/bin:$PATH" | sudo tee --append /etc/profile
+	else
+	    echo "Please do this manually !!! "
+	fi
+
+
+else
+	echo "JAVA_HOME exists already"
+fi
