@@ -34,7 +34,7 @@ then
 
   echo "Making the script executable"
   chmod u+x $file
-  ls $file
+  ls $downloadfolder
 
 	echo ""
 	echo "Adding the posh script to '.bashrc' file"
