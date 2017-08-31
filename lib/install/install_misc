@@ -34,4 +34,4 @@ echo "CMATRIX"
 echo "-------"
 sudo apt-get install cmatrix
 
-sleep 1
+sleep 3

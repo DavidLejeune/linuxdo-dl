@@ -52,4 +52,4 @@ else
   echo "Posh-git has been found."
 fi
 
-sleep 1
+sleep 3

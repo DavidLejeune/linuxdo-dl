@@ -31,4 +31,4 @@ else
 	echo "JAVA_HOME exists already"
 fi
 
-sleep 1
+sleep 3

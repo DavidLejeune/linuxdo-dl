@@ -23,4 +23,4 @@ else
 	echo "ANT_HOME exists already"
 fi
 
-sleep 1
+sleep 3

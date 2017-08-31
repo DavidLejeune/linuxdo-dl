@@ -53,4 +53,4 @@ else
   echo "SSH key found"
 fi
 
-sleep 1
+sleep 3
