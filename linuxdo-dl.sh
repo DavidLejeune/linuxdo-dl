@@ -21,7 +21,7 @@ lib/show_logo $msg
 
 
 echo 'Ensuring the scripts are executable'
-chmod u+x lin/install/*
+chmod u+x lib/install/*
 echo ''
 
 echo 'Checking which install scripts will be run ...'
