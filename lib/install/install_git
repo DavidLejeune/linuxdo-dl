@@ -16,7 +16,7 @@ echo 'POSH-GIT'
 echo '--------'
 
 
-downloadfolder="$HOME"
+downloadfolder="$HOME/linuxdo-dl/downloads"
 file="${downloadfolder}/git-prompt.sh"
 url="https://github.com/lyze/posh-git-sh/blob/master/git-prompt.sh"
 
@@ -25,12 +25,16 @@ then
     #echo "$0: File '${file}' not found."
   echo "File '${file}' not found."
 
-  #echo "Creating the target directory (in your home directory)"
+  echo "Creating the target directory (in your home directory)"
   #mkdir -p $downloadfolder
-  #echo $downloadfolder
+  echo $downloadfolder
 
 	echo "Retrieving file from '${url}'"
 	wget $url -P $downloadfolder
+
+  echo "Making the script executable"
+  chmod u+x $file
+  ls $file
 
 	echo ""
 	echo "Adding the posh script to '.bashrc' file"
