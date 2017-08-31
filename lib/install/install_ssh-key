@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
-echo ""
-echo "--------------------------------------------------------------"
-echo " INSTALLING SSH KEY"
-echo "--------------------------------------------------------------"
+
+msg=`basename "$0"`
+lib/show_logo $msg
+# echo ""
+# echo "--------------------------------------------------------------"
+# echo " INSTALLING SSH KEY"
+# echo "--------------------------------------------------------------"
 
 # Before you begin
 # Make sure you are running a bash shell. Bash shell is available in:

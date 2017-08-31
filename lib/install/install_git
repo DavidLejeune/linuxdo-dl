@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 
 
-echo ""
-echo "--------------------------------------------------------------"
-echo " INSTALLING GIT"
-echo "--------------------------------------------------------------"
-#msg=`basename "$0"`
-#lib/show_logo $msg
+msg=`basename "$0"`
+lib/show_logo $msg
+# echo ""
+# echo "--------------------------------------------------------------"
+# echo " INSTALLING GIT"
+# echo "--------------------------------------------------------------"
+
 
 sudo apt-get install git
 
