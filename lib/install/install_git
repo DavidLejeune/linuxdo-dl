@@ -18,7 +18,7 @@ echo '--------'
 
 downloadfolder="$HOME/linuxdo-dl/downloads"
 poshfolder="${downloadfolder}/posh-git-sh"
-file="${downloadfolder}/git-prompt.sh"
+file="${poshfolder}/git-prompt.sh"
 url="https://github.com/lyze/posh-git-sh.git"
 
 
@@ -34,18 +34,18 @@ then
 	echo "Cloning the repo from url : '${url}'"
 	git clone $url $poshfolder
 
-  # echo "Making the script executable"
-  # chmod u+x $file
-  # ls -alh $downloadfolder
+  echo "Making the script executable"
+  chmod u+x $file
+  ls -alh $downloadfolder
 
-	# echo ""
-	# echo "Adding the posh script to '.bashrc' file"
-  # if [ -f "$file" ]
-  # then
-  #   cat misc/bashrc_posh-git >> ~/.bashrc
-  #   echo "Reloading the '.bashrc' file"
-  #   . ~/.bashrc
-  # fi
+	echo ""
+	echo "Adding the posh script to '.bashrc' file"
+  if [ -f "$file" ]
+  then
+    cat misc/bashrc_posh-git >> ~/.bashrc
+    echo "Reloading the '.bashrc' file"
+    . ~/.bashrc
+  fi
 
 else
   echo "Posh-git has been found."
