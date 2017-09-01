@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-msg=`basename "$0"`
-lib/show_logo $msg
-# echo ""
-# echo "--------------------------------------------------------------"
-# echo " INSTALLING ANT"
-# echo "--------------------------------------------------------------"
+# msg=`basename "$0"`
+# lib/show_logo $msg
+echo ""
+echo "--------------------------------------------------------------"
+echo " INSTALLING ANT"
+echo "--------------------------------------------------------------"
 sudo apt-get install ant
 echo $ANT_HOME
 if [ ${#ANT_HOME} -le 1 ]; then

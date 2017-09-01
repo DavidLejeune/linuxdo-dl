@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 
-msg=`basename "$0"`
-lib/show_logo $msg
+# msg=`basename "$0"`
+# lib/show_logo $msg
+echo ""
+echo "--------------------------------------------------------------"
+echo " INSTALLING ATOM"
+echo "--------------------------------------------------------------"
 
 url="https://github.com/atom/atom/releases/download/v1.19.4/atom-amd64.deb"
 
@@ -21,7 +25,8 @@ then
 
 	echo "Downloading from url : '${url}'"
   echo "to downloadfolderr : '${downloadfolder}'"
-	wget $downloadfolder -P $downloadfolder
+  wget $downloadfolder #-P $downloadfolder
+  mv atom-amd64.deb ../../downloads/
 
   echo "Install Atom"
   sudo dpkg -i $file
