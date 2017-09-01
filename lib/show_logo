@@ -21,27 +21,22 @@ clear
 
 if [ $# -gt 0 ]
 then
-  echo ""
-else
-  echo "No args"
+  echo ' ###################################'
+  echo '   '$1 $2 $3 $4 $5 $6 $7 $8 $9
+  echo ' ###################################'
+  echo ''
 fi
 
-echo "The number of arguments is: $#"
-a=${@}
-echo "The total length of all arguments is: ${#a}: "
-count=0
-for var in "$@"
-do
-    echo "The length of argument '$var' is: ${#var}"
-    (( count++ ))
-    (( accum += ${#var} ))
-done
-echo "The counted number of arguments is: $count"
-echo "The accumulated length of all arguments is: $accum"
-
-
-
-echo ' ###################################'
-echo '   '$1 $2 $3 $4 $5 $6 $7 $8 $9
-echo ' ###################################'
-echo ''
+# echo "The number of arguments is: $#"
+# a=${@}
+# echo "The total length of all arguments is: ${#a}: "
+# count=0
+# for var in "$@"
+# do
+#     echo "The length of argument '$var' is: ${#var}"
+#     (( count++ ))
+#     (( accum += ${#var} ))
+# done
+# echo "The counted number of arguments is: $count"
+# echo "The accumulated length of all arguments is: $accum"
+#
