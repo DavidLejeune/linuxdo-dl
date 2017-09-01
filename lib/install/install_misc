@@ -37,6 +37,12 @@ lib/show_time
 # show the time in a loop
 #while true; do echo "$(date '+%D %T' | toilet -f term -F border --gay)"; sleep 1; done
 
+
+echo ""
+echo "FIGLET"
+echo "-------"
+sudo apt-get install figlet
+
 echo ""
 echo "CMATRIX"
 echo "-------"
