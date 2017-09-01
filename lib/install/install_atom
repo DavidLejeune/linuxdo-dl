@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+
+msg=`basename "$0"`
+lib/show_logo $msg
+
+url="https://github.com/atom/atom/releases/download/v1.19.4/atom-amd64.deb"
+
+
+
+downloadfolder="$HOME/linuxdo-dl/downloads"
+file="${downloadfolder}/atom-amd64.deb"
+
+
+if [ ! -f "$file" ]
+then
+    #echo "$0: File '${file}' not found."
+  echo "File '${file}' not found."
+
+  echo "Creating the target directories (in your home directory)"
+  mkdir -p $downloadfolder
+
+	echo "Downloading from url : '${url}'"
+	wget $downloadfolder -P $downloadfolder
+
+  echo "Install Atom"
+  sudo dpkg -i $file
+
+  echo "Install Atom's dependencies if they are missing"
+  sudo apt-get -f install
+
+else
+  echo "Atom has been found."
+fi
+
+sleep 3
