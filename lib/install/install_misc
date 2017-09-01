@@ -6,6 +6,14 @@ lib/show_logo $msg
 # echo "--------------------------------------------------------------"
 # echo " INSTALLING MISC TOOLS"
 # echo "--------------------------------------------------------------"
+
+
+echo ""
+echo "ADD-APT-REPOSITORY etc .."
+echo "--------------------------"
+sudo apt-get install software-properties-common
+
+
 echo ""
 echo "FORTUNE"
 echo "-------"
