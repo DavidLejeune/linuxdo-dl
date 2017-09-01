@@ -19,9 +19,11 @@ clear
 (clear && toilet -f slant -F gay DaLe && toilet -f digital -F gay  Linux CLI && echo "$(date '+%D %T' | toilet -f term -F border --gay)"&& fortune )
 
 
-if [ ! -f "$file" ]
+if [ $# -gt 0 ]
 then
   echo ""
+else
+  echo "No args"
 fi
 
 echo "The number of arguments is: $#"
