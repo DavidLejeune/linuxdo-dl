@@ -21,7 +21,7 @@ clear
 
 if [ ! -f "$file" ]
 then
-
+  echo ""
 fi
 
 echo "The number of arguments is: $#"
