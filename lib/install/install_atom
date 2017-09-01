@@ -20,6 +20,7 @@ then
   mkdir -p $downloadfolder
 
 	echo "Downloading from url : '${url}'"
+  echo "to downloadfolderr : '${downloadfolder}'"
 	wget $downloadfolder -P $downloadfolder
 
   echo "Install Atom"
